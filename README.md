@@ -1,22 +1,67 @@
-# Rxjs-basics
+# Rxjs-basics paso #1
 
-Este workshop le enseñara paso a paso las bases de `Rxjs`, para empezar vamos a configurar el ambiente de desarrollo, vamos a usar un archivo `index.html` para cargar `Rxjs` desde un cdn:
+En este paso vamos a añadir un archivo js, un lindo boton con bootstrap, asociarle un evento con Rxjs y asi ejecutar una acción, en este caso una alerta:
 
-* Primero cree un archivo `index.html` con el boilerplate basico, si no tiene ninguno, copie el que esta disponible en esta carpeta como `index-example.html` repositorio.
-* Primero importe `Rxjs` desde el cdn (revise las notas para saber como): https://unpkg.com/rxjs@5.5.2/bundles/Rx.min.js
-* Tambien importe el map por si quiere debuguear errores: https://unpkg.com/rxjs@5.5.2/bundles/Rx.min.js.map
-* Por ultimo, para estilizar los ejemplos un poco importe bootstrap desde el cdn: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
-* Tambien necesitaremos el css de bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+* Primero cree un archivo JS llamado `main.js`, un archivo CSS llamado `main.css` y añadalos con un script tag y un link tag a la cabecera de `index.html`.
+
+* Añada el boton como se ve a continuación:
+```html
+<div id='container'>
+  <button type="button" class="btn btn-primary">Contar click</button>
+</div>
+```
+
+* El boton esta en la esquina superior derecha, centremosla en la pagina, en `main.css` añada este css:
+```css
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+
+* En `main.js` cree una función y asociela a el evento `onload` de la ventana:
+```js
+window.onload = function start() {
+
+}
+```
+
+* En dicha función guarde en una variable una referencia al boton, obtenida a travez de un query al DOM:
+```js
+var button = document.querySelector('#container button');
+```
+
+* Ahora vamos a asociar el evento de click con Rxjs a una alerta de esta manera:
+```js
+  Rx
+    .Observable
+    .fromEvent(button, 'click')
+    .subscribe((event) => {
+      window.alert('Click de boton');
+    })
+```
+
+* En este punto, todo click del boton generará una alerta en la ventana.
 
 ## Notas:
-* Para importar un script desde html, inserte la url en la propiedad `src` del siguiente template:
-```html
-<script src=''></script>
-```
-* Para importar un css desde html, inserte la url en la propiedad `href` del siguiente template:
-```html
-<link rel='stylesheet' href=''>
+* El JS completo se ve asi:
+```js
+window.onload = function start() {
+  var button = document.querySelector('button');
+
+  Rx
+    .Observable
+    .fromEvent(button, 'click')
+    .subscribe((event) => {
+      window.alert('Click de boton');
+    })
+}
 ```
 
+
 # Siguiente paso
-Dirijase a la rama `#1` de este repositorio para continuar, e aqui la url: https://github.com/luchillo17/rxjs-basics/tree/%231
+Dirijase a la rama `#1` de este repositorio para continuar, e aqui la url: https://github.com/luchillo17/rxjs-basics/tree/%232
