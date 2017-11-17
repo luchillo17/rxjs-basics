@@ -13,6 +13,10 @@ Este workshop le enseñara paso a paso las bases de `Rxjs`, para empezar vamos a
 ```html
 <script src='' />
 ```
+* Para importar un css desde html, inserte la url en la propiedad `href` del siguiente template:
+```html
+<link rel="stylesheet" href="">
+```
 
 # Siguiente paso
 Dirijase a la rama `#1` de este repositorio para continuar, e aqui la url: https://github.com/luchillo17/rxjs-basics/tree/%231
