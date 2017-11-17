@@ -13,3 +13,6 @@ Este workshop le enseñara paso a paso las bases de `Rxjs`, para empezar vamos a
 ```html
 <script src='' />
 ```
+
+# Siguiente paso
+Dirijase a la rama `#1` de este repositorio para continuar, e aqui la url: https://github.com/luchillo17/rxjs-basics/tree/%231
