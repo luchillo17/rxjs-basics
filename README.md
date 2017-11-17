@@ -11,7 +11,7 @@ Este workshop le enseñara paso a paso las bases de `Rxjs`, para empezar vamos a
 ## Notas:
 * Para importar un script desde html, inserte la url en la propiedad `src` del siguiente template:
 ```html
-<script src='' />
+<script src=''></script>
 ```
 * Para importar un css desde html, inserte la url en la propiedad `href` del siguiente template:
 ```html
