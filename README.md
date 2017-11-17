@@ -15,7 +15,7 @@ Este workshop le enseñara paso a paso las bases de `Rxjs`, para empezar vamos a
 ```
 * Para importar un css desde html, inserte la url en la propiedad `href` del siguiente template:
 ```html
-<link rel="stylesheet" href="">
+<link rel='stylesheet' href=''>
 ```
 
 # Siguiente paso
